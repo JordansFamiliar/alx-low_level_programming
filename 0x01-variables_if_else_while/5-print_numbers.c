@@ -19,7 +19,7 @@ int main(void)
 	{
 		printf("%d", i);
 		if (i == 9)
-			print('\n');
+			printf('\n');
 		i++;
 	}
 
