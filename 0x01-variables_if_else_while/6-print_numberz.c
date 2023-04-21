@@ -13,7 +13,7 @@ int main(void)
 	int i;
 
 	/* initialise */
-	int i = 0;
+	i = 0;
 
 	while (i < 9)
 	{

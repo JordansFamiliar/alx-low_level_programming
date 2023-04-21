@@ -11,15 +11,17 @@ int main(void)
 {
 	/*define variables*/
 	int i;
+	char n;
 
 	/*initialise*/
 	i = 0;
+	char = '\n';
 
 	while (i < 9)
 	{
 		printf("%d", i);
 		if (i == 9)
-			printf('\n');
+			printf("%d", n);
 		i++;
 	}
 
