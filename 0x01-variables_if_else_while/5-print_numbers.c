@@ -15,13 +15,18 @@ int main(void)
 
 	/*initialise*/
 	i = 0;
-	n = '\n';
+	n = '';
 
 	while (i <= 9)
 	{
-		printf("%d", i);
-		i++;
+		if (i == 9)
+			printf("%d\n", i);
+		else if (i != 9)
+		{
+			printf("%d", i);
+			i++;
+		}
 	}
-	printf("%d", n);
+
 	return (0);
 }
