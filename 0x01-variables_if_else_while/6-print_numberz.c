@@ -12,7 +12,7 @@ int main(void)
 {
 	/* define variables */
 	int i;
-	char a;
+	int a;
 
 	/* initialise */
 	i = 0;
