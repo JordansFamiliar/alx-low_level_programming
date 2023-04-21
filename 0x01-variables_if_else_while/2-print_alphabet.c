@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
 * main - prints string to stdout
@@ -10,11 +11,11 @@
 int main(void)
 {
 	/*define*/
-	char alpha[];
+	char alpha[24];
 	int i;
 
 	/*initialize*/
-	alpha = "abcdefghijklmnopqrstuvwxyz";
+	strcpy(alpha, "abcdefghijklmnopqrstuvwxyz");
 	i = 0;
 
 	while (i < 26)
