@@ -15,9 +15,9 @@ int main(void)
 
 	/*initialise*/
 	i = 0;
-	char = '\n';
+	n = '\n';
 
-	while (i < 9)
+	while (i < 10)
 	{
 		printf("%d", i);
 		if (i == 9)

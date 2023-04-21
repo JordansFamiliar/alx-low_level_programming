@@ -15,7 +15,7 @@ int main(void)
 	/* initialise */
 	i = 0;
 
-	while (i < 9)
+	while (i < 10)
 	{
 		putchar(i);
 		i++;
