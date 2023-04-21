@@ -18,7 +18,10 @@ int main(void)
 	while (i <= 9)
 	{
 		if (i == 9)
+		{
 			printf("%d\n", i);
+			i++;
+		}
 		else if (i != 9)
 		{
 			printf("%d", i);
