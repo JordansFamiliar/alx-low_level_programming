@@ -17,12 +17,12 @@ int main(void)
 	i = '0';
 	a = 'a';
 
-	while (i <= 9)
+	while (i <= '9')
 	{
 		putchar(i);
 		i++;
 	}
-	while (a <= f)
+	while (a <= 'f')
 	{
 		putchar(a);
 		a++;
