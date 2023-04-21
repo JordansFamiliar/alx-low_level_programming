@@ -14,7 +14,7 @@ int main(void)
 	int a;
 
 	/* init */
-	i = 01;
+	i = 1;
 	a = i;
 
 	while (i < 90)
