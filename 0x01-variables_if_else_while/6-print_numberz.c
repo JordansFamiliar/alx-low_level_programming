@@ -12,13 +12,15 @@ int main(void)
 {
 	/* define variables */
 	int i;
+	char a;
 
 	/* initialise */
 	i = 0;
 
-	while (i < 9)
+	while (i < 10)
 	{
-		putchar(str(i));
+		a = (char)i;
+		putchar(a);
 		i++;
 		if (i == 9)
 			putchar('\n');
