@@ -11,11 +11,9 @@ int main(void)
 {
 	/*define variables*/
 	int i;
-	char n;
 
 	/*initialise*/
 	i = 0;
-	n = '';
 
 	while (i <= 9)
 	{
