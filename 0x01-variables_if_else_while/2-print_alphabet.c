@@ -11,7 +11,7 @@
 int main(void)
 {
 	/*define*/
-	char alpha[24];
+	char alpha[27];
 	int i;
 
 	/*initialize*/
