@@ -21,6 +21,7 @@ int main(void)
 	while (i < 26)
 	{
 		putchar(alpha[i]);
+		i++;
 	}
 	return (0);
 }
