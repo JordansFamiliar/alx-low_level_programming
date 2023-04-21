@@ -22,6 +22,8 @@ int main(void)
 	{
 		putchar(alpha[i]);
 		i++;
+		if (i == 26)
+			putchar('\n');
 	}
 	return (0);
 }

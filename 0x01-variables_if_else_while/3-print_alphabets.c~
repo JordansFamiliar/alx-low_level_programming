@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/**
+* main - prints a string
+*
+* prints the alphabet to stdout
+* Return: 0
+*/
+
+int main(void)
+{
+	/*define variables*/
+	char upper_case[27];
+	char lower_case[27];
+	int i;
+	int j;
+
+	/*initialisation*/
+	strcpy(upper_case, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	strcpy(lower_case, "abcdefghijklmnopqrstuvwxyz");
+	i = 0;
+
+	while (i < 26)
+	{
+		putchar(lower_case[i]);
+		i++;
+	}
+
+	while (j < 26)
+	{
+		putchar(upper_case[j]);
+		j++;
+		if (j == 26)
+			putchar('\n');
+	}
+	
+	return (0);
+}
