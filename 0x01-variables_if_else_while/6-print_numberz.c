@@ -17,9 +17,9 @@ int main(void)
 	/* initialise */
 	i = 0;
 
-	while (i < 10)
+	while (i < 9)
 	{
-		a = (char)i;
+		a = i % 10 + '0';
 		putchar(a);
 		i++;
 		if (i == 9)
