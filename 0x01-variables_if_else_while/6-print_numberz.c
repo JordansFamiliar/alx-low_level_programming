@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
 * main - prints to stdout
@@ -15,9 +16,9 @@ int main(void)
 	/* initialise */
 	i = 0;
 
-	while (i <= 9)
+	while (i < 9)
 	{
-		putchar(char(i));
+		putchar(str(i));
 		i++;
 		if (i == 9)
 			putchar('\n');
