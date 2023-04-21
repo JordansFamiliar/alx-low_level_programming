@@ -20,10 +20,8 @@ int main(void)
 	while (i <= 9)
 	{
 		printf("%d", i);
-		if (i == 9)
-			printf("%d", n);
 		i++;
 	}
-
+	printf("%d", n);
 	return (0);
 }
