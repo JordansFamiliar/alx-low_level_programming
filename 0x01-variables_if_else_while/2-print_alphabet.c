@@ -11,19 +11,16 @@
 int main(void)
 {
 	/*define*/
-	char alpha[27];
-	int i;
+	char a;
 
 	/*initialize*/
-	strcpy(alpha, "abcdefghijklmnopqrstuvwxyz");
-	i = 0;
+	a = 'a';
 
-	while (i < 26)
+	while (a <= 'z')
 	{
-		putchar(alpha[i]);
-		i++;
-		if (i == 26)
-			putchar('\n');
+		putchar(a);
+		a++;
 	}
+	putchar('\n');
 	return (0);
 }

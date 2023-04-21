@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+* main - prints to std
+*
+* prints char to stdout
+* Return: 0
+*/
+int main(void)
+{
+	/* define */
+	char x;
+
+	/* initialise */
+	x = 'a';
+
+	while (x <= 'z')
+	{
+		if(x != 'e' && x != 'q')
+			putchar(x);
+		x++;
+	}
+	putchar('\n');
+	return (0);
+}

@@ -12,29 +12,24 @@
 int main(void)
 {
 	/*define variables*/
-	char upper_case[27];
-	char lower_case[27];
-	int i;
-	int j;
+	char a;
+	char x;
 
 	/*initialisation*/
-	strcpy(upper_case, "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-	strcpy(lower_case, "abcdefghijklmnopqrstuvwxyz");
-	i = 0;
+	a = 'a';
+	x = 'A';
 
-	while (i < 26)
+	while (a <= 'z')
 	{
-		putchar(lower_case[i]);
-		i++;
+		putchar(a);
+		a++;
 	}
 
-	while (j < 26)
+	while (x <= 'Z')
 	{
-		putchar(upper_case[j]);
-		j++;
-		if (j == 26)
-			putchar('\n');
+		putchar(x);
+		x++;
 	}
-
+	putchar('\n');
 	return (0);
 }

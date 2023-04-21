@@ -21,9 +21,9 @@ int main(void)
 	{
 		a = i % 10 + '0';
 		putchar(a);
-		i++;
 		if (i == 9)
 			putchar('\n');
+		i++;
 	}
 	return (0);
 }
