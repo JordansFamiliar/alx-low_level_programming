@@ -31,8 +31,11 @@ int main(void)
 					if (d == 3)
 						x = c;
 					putchar((x % 10 + '0'));
-					d = 1;
-					break;
+					if (d == 3)
+					{
+						d = 1;
+						break;
+					}
 				}
 				if (a == 7 && b == 8 && c == 9)
 				{
