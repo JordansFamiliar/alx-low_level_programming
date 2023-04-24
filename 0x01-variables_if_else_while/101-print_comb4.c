@@ -15,7 +15,6 @@ int main(void)
 	a = 0;
 	d = 1;
 	x = 0;
-
 	for (; a < 8; a++)
 	{
 		for (b = a + 1; b < 9; b++)
@@ -47,6 +46,5 @@ int main(void)
 			}
 		}
 	}
-
 	return (0);
 }
