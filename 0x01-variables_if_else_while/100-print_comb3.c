@@ -33,6 +33,7 @@ int main(void)
 			putchar((a % 10 + '0'));
 			if (i == 8 && a == 9)
 			{
+				putchar('\n');
 				break;
 			}
 			putchar(',');
