@@ -22,14 +22,7 @@ int main(void)
 		a = i + 1;
 		while (a < 10)
 		{
-			if (i < 10)
-			{
-				putchar(('0' + i));
-			}
-			if (i >= 10)
-			{
-				putchar((i % 10 + '0'));
-			}
+			putchar((i < 10 ? '0' + i : i % 10 + '0'));
 			putchar((a % 10 + '0'));
 			if (i == 8 && a == 9)
 			{
