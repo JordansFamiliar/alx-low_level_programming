@@ -19,7 +19,7 @@ int main(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					for (e = 1, e < 5; e++)
+					for (e = 1; e < 5; e++)
 					{
 						if (e == 3)
 							x = c;
