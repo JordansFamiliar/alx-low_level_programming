@@ -16,13 +16,13 @@ int main(void)
 	d = 1;
 	x = 0;
 
-	for (a; a < 8; a++)
+	for (; a < 8; a++)
 	{
 		for (b = a + 1; b < 9; b++)
 		{
 			for (c = b + 1; c < 10; c++)
 			{
-				for (d; d < 4; d++)
+				for (; d < 4; d++)
 				{
 					if (d == 1)
 						x = a;
