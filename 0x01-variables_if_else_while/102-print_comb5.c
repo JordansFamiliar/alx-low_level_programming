@@ -35,7 +35,7 @@ int main(void)
 							putchar(' ');
 							break;
 						}
-						x = (e == 1) ? x = a : x = b;
+						x = (e == 1) ? a : b;
 						putchar(x % 10 + '0');
 						if (e == 2)
 							putchar(' ');
