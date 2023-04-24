@@ -21,9 +21,9 @@ int main(void)
 	{
 		if (i % 10 == 9)
 		{
+			putchar((i % 10 + '0'));
 			a += 11;
 			i = a;
-			putchar((i % 10 + '0'));
 			continue;
 		}
 
