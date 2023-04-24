@@ -31,14 +31,14 @@ int main(void)
 					if (d == 3)
 						x = c;
 					putchar((x % 10 + '0'));
-					if (a  == 7 && b == 8 && c == 9)
-					{
-						putchar('\n');
-						break;
-					}
-					putchar(',');
-					putchar(' ');
 				}
+				if (a == 7 && b == 8 && c == 9)
+				{
+					putchar('\n');
+					break;
+				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
