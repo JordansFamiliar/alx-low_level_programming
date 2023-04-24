@@ -20,7 +20,7 @@ int main(void)
 	while (i < 90)
 	{
 		putchar((i % 10 + '0'));
-		if ((i - 9) % 10 == 0)
+		if (i % 10 == 9)
 		{
 			a = a + 11;
 			i = a;
