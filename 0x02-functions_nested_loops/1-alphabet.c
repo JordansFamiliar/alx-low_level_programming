@@ -1,19 +1,5 @@
 #include <stdio.h>
-#include "_putchar.c"
-
-int _putchar(char);
-void print_alphabet(void);
-
-/**
-* main - Entry point
-*
-* Return: 0 success
-*/
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
+#include "main.h"
 
 /**
 * print_alphabet - prints to stdout

@@ -1,8 +1,5 @@
-#include "_putchar.c"
+#include "main.h"
 #include <stdio.h>
-
-void print_to_stdout(void);
-int _putchar(char);
 
 /**
 * main - Entry point
