@@ -10,14 +10,12 @@ int print_last_digit(int i)
 {
 	int retval;
 
-	if (i < 0)
-	{
-		i = -(i);
-	}
-	if (i >= 10)
+	if (i >= 10 || i <= -10 || i == INT_MIN)
 	{
 		i = i % 10;
 	}
+	else if (i < 10)
+		i = -i;
 	retval = i;
 	_putchar(i + '0');
 	return (retval);
