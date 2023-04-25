@@ -8,6 +8,16 @@
 */
 int print_last_digit(int i)
 {
-	int retval = i % 10;
+	int retval;
+
+	if (i < 0)
+	{
+		i = -(i);
+	}
+	if (i >= 10)
+	{
+		i = 1 % 10;
+	}
+	retval = i;
 	return (retval);
 }
