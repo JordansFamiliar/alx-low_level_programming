@@ -29,8 +29,5 @@ int print_sign(int n)
 		_putchar(c);
 		retval = -1;
 	}
-
-	_putchar(',');
-	_putchar(' ');
 	return (retval);
 }
