@@ -11,11 +11,11 @@ int print_last_digit(int i)
 {
 	int retval;
 
-	if (i >= 10 || i <= -10 || i == INT_MIN)
+	if (i >= 10 || i <= -10)
 	{
 		i = i % 10;
 	}
-	else if (i < 0)
+	if (i < 0)
 		i = -i;
 	retval = i;
 	_putchar(i + '0');
