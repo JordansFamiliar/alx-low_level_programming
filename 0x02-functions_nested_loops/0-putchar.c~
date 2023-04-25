@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+void print_to_stdout(void);
+/**
+* main - Entry point
+*
+* Return: 0 Success
+*/
+int main(void)
+{
+	print_to_stdout();
+	return (0);
+}
+
+/**
+* print_to_stdout - prints a string to stdout
+*
+* Return: void
+*/
+void print_to_stdout(void)
+{
+	printf("_putchar\n");
+}
