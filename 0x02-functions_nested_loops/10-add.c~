@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+* add - adds two integers
+* @i: first argument
+* @a: second argument
+*
+* Return: int
+*/
+int add(int i, int a)
+{
+	int retval = i + a;
+	
+	return (retval);
+}
