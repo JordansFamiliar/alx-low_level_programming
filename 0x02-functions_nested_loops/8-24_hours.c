@@ -7,7 +7,7 @@
 */
 void jack_bauer(void)
 {
-	char a, b, c, d;
+	int a, b, c, d;
 
 	for (a = 0; a < 3; a++)
 	{
@@ -17,11 +17,11 @@ void jack_bauer(void)
 			{
 				for (d = 0; d < 10; d++)
 				{
-					_putchar(a);
-					_putchar(b);
+					_putchar((a + '0'));
+					_putchar((b + '0'));
 					_putchar(':');
-					_putchar(c);
-					_putchar(d);
+					_putchar((c + '0'));
+					_putchar((d + '0'));
 					_putchar('\n');
 				}
 			}
