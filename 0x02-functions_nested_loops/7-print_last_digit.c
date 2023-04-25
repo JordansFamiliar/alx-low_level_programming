@@ -16,8 +16,9 @@ int print_last_digit(int i)
 	}
 	if (i >= 10)
 	{
-		i = 1 % 10;
+		i = i % 10;
 	}
 	retval = i;
+	_putchar(i + '0');
 	return (retval);
 }
