@@ -23,23 +23,15 @@ void print_remaining_days(int month, int day, int year)
 	}
 	else
 	{
-		if (month == 2 && day == 60)
+		if (day > max_days)
 		{
 			printf("Invalid date: %02d/%02d/%04d\n"
 			       , month, day - 31, year);
 		}
-		if (month > 2)
+		else
 		{
-			if (day > max_days)
-			{
-				printf("Invalid date: %02d/%02d/%04d\n"
-				       , month, day - 31, year);
-			}
-			else
-			{
-				printf("Day of the year: %d\n", day);
-				printf("Remaining days: %d\n", 365 - day);
-			}
+			printf("Day of the year: %d\n", day);
+			printf("Remaining days: %d\n", 365 - day);
 		}
 	}
 }
@@ -52,17 +44,29 @@ int get_max_days(int a)
 {
 	int max_days, odd_days, even_days;
 
-	if (a % 2 == 0)
+	if (a > 2)
 	{
-		odd_days = (a / 2) * 31;
-		even_days = (a / 2) * 30;
+		if (a % 2 == 0)
+		{
+			odd_days = (a / 2) * 31;
+			even_days = (a / 2) * 30;
+		}
+		if (a % 2 != 0)
+		{
+			even_days = ((a - 1) / 2) * 30;
+			odd_days = ((a - 1) / 2 + 1) * 31;
+		}
+		max_days = (odd_days + even_days) - 2;
+
 	}
-	if (a % 2 != 0)
+	if (a == 2)
 	{
-		even_days = ((a - 1) / 2) * 30;
-		odd_days = ((a - 1) / 2 + 1) * 31;
+		max_days = 59;
 	}
-	max_days = (odd_days + even_days) - 2;
+	if (a < 2)
+	{
+		max_days = 31;
+	}
 
 	return (max_days);
 }
