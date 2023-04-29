@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-void print_prime_factor(long long);
+void print_prime_factor(long int);
 /**
 * main - entry point
 *
@@ -10,33 +10,20 @@ void print_prime_factor(long long);
 */
 int main(void)
 {
-	long long n = 612852475143;
-	long long prime = -1;
-	long long factor, i;
+	long int n = 612852475143;
+	long int prime = -1;
+	long int factor;
 
-	for (factor = n; factor >= 1; factor--)
+	for (factor = 2; factor * factor <= n; factor++)
 	{
-		if (n % factor == 0)
+		while (n % factor)
 		{
-			for (i = factor; i >= 1; i--)
-			{
-				if (factor % i == 0 && i != factor && i != 1)
-				{
-					break;
-				}
-				if (i == 1)
-				{
-					prime = factor;
-					break;
-				}
-			}
-			if (prime == factor)
-			{
-				print_prime_factor(prime);
-				break;
-			}
+			prime = factor;
+			n /= factor;
 		}
 	}
+
+	print_prime_factor(prime);
 	return (0);
 }
 /**
@@ -44,7 +31,7 @@ int main(void)
 * @n: first argument
 * Return: void
 */
-void print_prime_factor(long long n)
+void print_prime_factor(long int n)
 {
 	int i = 0;
 	int j;
