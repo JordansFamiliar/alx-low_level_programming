@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
+void print_prime_factor(long long);
 /**
 * main - entry point
 *
@@ -10,17 +12,12 @@ int main(void)
 {
 	long long n = 612852475143;
 	long long prime = -1;
-	long factor, i;
-	char str[20];
-
-	snprintf(str, 20, "%lld", n);
+	long long factor, i;
 
 	for (factor = n; factor >= 1; factor--)
 	{
-		/* find factors of n */
 		if (n % factor == 0)
 		{
-			/* determine if factor is a prime num */
 			for (i = factor; i >= 1; i--)
 			{
 				if (factor % i == 0 && i != factor && i != 1)
@@ -35,10 +32,34 @@ int main(void)
 			}
 			if (prime == factor)
 			{
-				printf("%lld\n", prime);
+				print_prime_factor(prime);
 				break;
 			}
 		}
 	}
 	return (0);
+}
+/**
+* print_prime_factor - prints the prime factor
+* @n: first argument
+* Return: void
+*/
+void print_prime_factor(long long n)
+{
+	int i = 0;
+	int j;
+	char *str = (char *) malloc(20 * sizeof(char));
+
+	while (n > 0)
+	{
+		str[i++] = n % 10 + '0';
+		n /= 10;
+	}
+	str[i] = '\0';
+
+	for (j = i - 1; j >= 0; j--)
+	{
+		putchar(str[j]);
+	}
+	free(str);
 }
