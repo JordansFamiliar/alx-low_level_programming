@@ -1,8 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 
-void print_prime_factor(long int);
 /**
 * main - entry point
 *
@@ -31,6 +29,7 @@ int main(void)
 	_putchar('\n');
 	return (0);
 }
+
 /**
 * print_prime_factor - prints the prime factor
 * @n: first argument

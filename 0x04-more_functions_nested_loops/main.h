@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_prime_factor(long int);
 void print_triangle(int);
 void print_square(int);
 void print_diagonal(int);
