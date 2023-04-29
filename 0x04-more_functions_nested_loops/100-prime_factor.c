@@ -40,7 +40,7 @@ void print_prime_factor(long int n)
 {
 	int i = 0;
 	int j;
-	char *str = (char *) malloc(20 * sizeof(char));
+	char *str[13];
 
 	while (n > 0)
 	{
@@ -53,5 +53,4 @@ void print_prime_factor(long int n)
 	{
 		_putchar(str[j]);
 	}
-	free(str);
 }
