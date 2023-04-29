@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "main.h"
 
 void print_prime_factor(long long);
 /**
@@ -59,7 +59,7 @@ void print_prime_factor(long long n)
 
 	for (j = i - 1; j >= 0; j--)
 	{
-		putchar(str[j]);
+		_putchar(str[j]);
 	}
 	free(str);
 }
