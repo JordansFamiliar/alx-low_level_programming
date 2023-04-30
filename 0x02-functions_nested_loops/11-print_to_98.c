@@ -2,52 +2,77 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+void convert_string(int);
 /**
 * print_to_98 - prints numbers to 98
-* @i: first argument
-*
+* @n: first argument
 * Return: void
 */
-void print_to_98(int i)
+void print_to_98(int n)
 {
-	int digit;
+	int num;
 
-	if (i < 98)
+	if (n <= 98)
 	{
-		while (i <= 98)
+		while (n <= 98)
 		{
-			if (i >= 10)
+			num = n;
+			if (n < 0)
 			{
-				digit = i / 10 + '0';
-				_putchar(digit);
-				digit = i % 10 + '0';
-				_putchar(digit);
+				num = -(n);
+				_putchar('-');
 			}
-			if (i < 10)
-				_putchar(i + '0');
-			if (i < 98)
+			convert_string(num);
+			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-			i++;
+			n++;
 		}
 	}
-	else
+	else if (n > 98)
 	{
-		while (i >= 98)
+		while (n >= 98)
 		{
-			digit = i / 10 + '0';
-			_putchar(digit);
-			digit = i % 10 + '0';
-			_putchar(digit);
-			if (i > 98)
+			num = n;
+			convert_string(num);
+			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
 			}
-			i--;
+			n--;
 		}
 	}
 	_putchar('\n');
+}
+/**
+* convert_string - converts number to char
+* @n: first parameter
+* Return: void
+*/
+void convert_string(int n)
+{
+	int j, i = 0;
+
+	char *str = malloc(10 * sizeof(char));
+
+	j = i;
+
+	while (n >= 1)
+	{
+		str[i] = n % 10 + '0';
+		i++;
+		n /= 10;
+	}
+	str[i] = '\0';
+	j = i - 1;
+
+	while (j >= 0)
+	{
+		_putchar(str[j]);
+		j--;
+	}
+	free(str);
 }
