@@ -21,14 +21,14 @@ void rev_string(char *s)
 	}
 	b = malloc(sizeof(char) * (i + 1));
 	b[i] = '\0';
-        i-- 
-        for (; i >= 0; i--)
+	i--; 
+	for (; i >= 0; i--)
 	{
 		b[j] = s[i];
-                j++;
+		j++;
 	}
-        s[j] = '\0';
-        j--;
+	s[j] = '\0';
+	j--;
 	for (; j >= 0; j--)
 	{
 		s[j] = b[j];
