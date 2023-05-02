@@ -9,6 +9,8 @@
 
 void rev_string(char *s)
 {
+	char *b;
+
 	int i, j;
 
 	i = j = 0;
@@ -17,7 +19,7 @@ void rev_string(char *s)
 	{
 		i++;
 	}
-	char *b = malloc(sizeof(char) * i + 1);
+	b = malloc(sizeof(char) * (i + 1));
 	b[i] = '\0';
 	i--;
 
