@@ -1,0 +1,25 @@
+#include "main.h"
+
+/**
+* puts2 - prints every other character
+* @str: first argument
+* Return: void
+*/
+
+void puts2(char *str)
+{
+	int i = 0;
+
+	while (str[i])
+	{
+		i++;
+	}
+	for (int j = 0; j <= i; j++)
+	{
+		if (j % 2 != 0)
+		{
+			_putchar(s[j]);
+		}
+	}
+	_putchar('\n');
+}
