@@ -13,13 +13,11 @@ void rev_string(char *s)
 
 	i = j = 0;
 
-	char *b;
-
 	while (s[i])
 	{
 		i++;
 	}
-	b = malloc(sizeof(char) * i + 1);
+	char *b = malloc(sizeof(char) * i + 1);
 	b[i] = '\0';
 	i--;
 
