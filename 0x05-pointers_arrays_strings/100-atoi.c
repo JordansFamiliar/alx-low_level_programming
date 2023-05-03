@@ -9,13 +9,13 @@
 
 int _atoi(char *s)
 {
-	int a, total, tens, digits, i, j, index;
+	int a, i, j, index = -1;
+
+	double total, tens, digits;
 
 	bool is_negative = false;
 
 	total = digits = i = j = 0;
-	tens = 1;
-	index = -1;
 	while (true)
 	{
 		if (s[i] == '-')
@@ -24,7 +24,7 @@ int _atoi(char *s)
 		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (index < 0)
+			if (index == -1)
 				index = i;
 			j++;
 		}
@@ -33,12 +33,12 @@ int _atoi(char *s)
 			j -= 1;
 			for (; index < i; index++)
 			{
+				tens = 1;
 				for (a = j; a > 0; a--)
 					tens *= 10;
 				digits = s[index] - '0';
 				total += digits * tens;
 				j--;
-				tens = 1;
 			}
 			break;
 		}
