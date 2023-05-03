@@ -20,7 +20,7 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-' && (s[i + 1] >= 48 && s[i + 1] <= 57))
 			is_negative = true;
-		if (s[i] >= 48 && s[i] <= 57)
+		if (s[i] >= '0' && s[i] <= '9')
 		{
 			if (index == -1)
 				index = i;
