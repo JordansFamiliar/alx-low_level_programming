@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _atoi(char *);
 char *_strcpy(char *, char *);
 void print_array(int *, int);
 void puts_half(char *);
