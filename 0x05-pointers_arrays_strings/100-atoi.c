@@ -18,8 +18,10 @@ int _atoi(char *s)
 	index = -1;
 	while (true)
 	{
-		if (s[i] == '-' && (s[i + 1] >= 48 && s[i + 1] <= 57))
-			is_negative = true;
+		if (s[i] == '-')
+		{
+			is_negative = (is_negative ? false : true);
+		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
 			if (index < 0)
