@@ -9,38 +9,40 @@
 
 int _atoi(char *s)
 {
-	int total, tens, digits, i, j, index, a;
+	int total, tens, digits, i, j, index;
 
 	bool is_negative = false;
 
 	total = digits = i = j = 0;
 	tens = 1;
 	index = -1;
-	while (s[i])
+	while (i <= (sizeof(s) / sizeof(char)))
 	{
 		if (s[i] == '-' && (s[i + 1] >= 48 && s[i + 1] <= 57))
 			is_negative = true;
-		if (s[i] >= '0' && s[i] <= '9')
+		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (index == -1)
+			if (index < 0)
 				index = i;
 			j++;
 		}
-		else if (index != -1)
+		else if (index >= 0 && (s[i] < 48 || s[i] > 57))
 		{
+			j -= 1;
 			for (; index < i; index++)
 			{
-				for (a = j; a > 0; a--)
+				for (int a = j; a > 0; a--)
 					tens *= 10;
 				digits = s[index] - '0';
-				total += digits;
+				total += digits * tens;
 				j--;
+				tens = 1;
 			}
 			break;
 		}
 		i++;
 	}
 	if (is_negative)
-		total = -total;
+		total *= -1;
 	return (total);
 }
