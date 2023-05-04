@@ -8,17 +8,17 @@
 
 void reverse_array(int *a, int n)
 {
-	int *i = &a[n - 1];*/
-
+	int *i = malloc(sizeof(int) * n);
 	int j = 0;
+	int k = 0;
 
-	 for (n - 1; n >= 0; n--)
-	 {
-	 	i[j] = a[n];
+	for (k = n - 1; k >= 0; k--)
+	{
+		i[j] = a[k];
 	 	j++;
-	 }
-	 for (; n <= j; n++)
-	 {
-	 	a[n] = i[n];
-	 }
+	}
+	for (k = 0; k < n; k++)
+	{
+		a[k] = i[k];
+	}
 }
