@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
-* strcmp - compares 2 strings
+* _strcmp - compares 2 strings
 * @s1: frist string
 * @s2: second string
 * Return: int
 */
 
-int strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i, retval = 0;
 
