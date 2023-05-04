@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 
 /**
 * reverse_array - reverse the elements in an array
@@ -9,7 +8,7 @@
 
 void reverse_array(int *a, int n)
 {
-	int *i = malloc(sizeof(int) * n);
+	char i[n];
 	int j = 0;
 	int k = 0;
 
