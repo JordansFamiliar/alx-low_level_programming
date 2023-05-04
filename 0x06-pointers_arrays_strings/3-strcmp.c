@@ -16,19 +16,23 @@ int _strcmp(char *s1, char *s2)
 		if (s1[i] != s2[i])
 		{
 			retval =  s1[i] - s2[i];
+			return (retval);
 		}
 	}
 	if (s1[i] == s2[i])
 	{
 		retval = 0;
+		return (retval);
 	}
 	else if (s1[i] == '\0')
 	{
 		retval = -s2[i];
+		return (retval);
 	}
 	else
 	{
 		retval = s1[i];
+		return (retval);
 	}
 	return (retval);
 }
