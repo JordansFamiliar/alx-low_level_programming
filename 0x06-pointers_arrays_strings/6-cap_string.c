@@ -8,6 +8,8 @@
 
 char *cap_string(char *s)
 {
+	int i = 0;
+
 	while (s[i])
 	{
 		if (s[i] == 9 || s[i] == 10 || s[i] == 32 || s[i] == 33
