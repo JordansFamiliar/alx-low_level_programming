@@ -8,10 +8,8 @@
 
 char *leet(char *s)
 {
-	char c[] = "AEOTLaeotl";
-
-	int n[] = {4, 3, 0, 7, 1, 4, 3, 0, 7, 1};
-
+	char *c = "AEOTLaeotl";
+	char *n = "4307143071";
 	int i, j;
 
 	i = j = 0;
