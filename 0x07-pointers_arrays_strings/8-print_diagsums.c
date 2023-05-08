@@ -8,22 +8,15 @@
 * Return: void
 */
 
-void print_diagsum(int *a, int size)
+void print_diagsums(int *a, int size)
 {
-	int i, counter;
+	int i, counter1, counter2;
 
-	i = counter = 0;
-	while (i < size)
+	counter1 = counter2 = 0;
+	for (i = 0; i < size; i++)
 	{
-		counter += *(a + i * size + i);
-		i++;
+		counter1 += *(a + i * size + i);
+		counter2 += *(a + i * size + (size - i - 1));
 	}
-	printf("%d, ", counter);
-	i = counter = 0;
-	while (i < size)
-	{
-		counter += *(a + i * size + (size - i - 1));
-		i++;
-	}
-	printf("%d\n", counter);
+	printf("%d, %d\n", counter1, counter2);
 }
