@@ -1,8 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void print_diagsums(int *, int);
-void print_chessboard(char *);
+void print_diagsums(int *a, int size);
+void print_chessboard(char (*a)[8]);
 char *_strstr(char *, char *);
 char *_strpbrk(char *, char *);
 unsigned int _strspn(char *, char *);
