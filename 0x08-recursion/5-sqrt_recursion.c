@@ -18,8 +18,8 @@ int _sqrt_recursion(int n)
 
 	if (i == 0)
 		return (rt);
-	if (rt * rt == n)
-		return (rt);
-	if (i > 0)
+	if (i >= (2 * rt + 1))
+		return (rt + 1);
+	else
 		return (-1);
 }
