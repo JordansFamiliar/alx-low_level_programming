@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-#include <string>
+#include <string.h>
 
 /**
  * main - entry point
