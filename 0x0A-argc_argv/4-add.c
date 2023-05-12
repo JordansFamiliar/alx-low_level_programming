@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <ctype.h>
 #include <string.h>
 
 /**
@@ -11,22 +10,18 @@
  */
 int main(int argc, char **argv)
 {
-	long int i, num, sum = 0;
+	long int i, sum = 0;
 
-	if (argc <= 1)
-		return (1);
-	for (i = 0; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) || strcmp(argv[i], "0") == 0)
-		{
-			num = atoi(argv[i]);
-			sum += num;
-		}
-		else
+		if (atoi(argv[i]) != 0)
+			sum += atoi(argv[i]);
+		else if (atoi(argv[i]) == 0 && strcmp(argv[i], "0") != 0)
 		{
 			printf("Error\n");
 			return (1);
 		}
 	}
+	printf("%ld\n", sum);
 	return (0);
 }
