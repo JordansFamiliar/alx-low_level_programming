@@ -35,7 +35,11 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL && s1 != NULL)
 		return (ret_string(s1));
 	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	{
+		c = malloc(sizeof(char) + 1);
+		c[0] = '\0';
+		return (c);
+	}
 	while (s1[i])
 		i++;
 	while (s2[j])
