@@ -2,6 +2,23 @@
 #include <stdlib.h>
 
 /**
+ * ret_string - returns a pointer to a string
+ * @a: string
+ * Return: char *
+ */
+char *ret_string(char *a)
+{
+	int j, i = 0;
+	char *s;
+
+	while (a[i])
+		i++;
+	s = malloc(sizeof(char) * (i + 1));
+	for (j = 0; j <= i; j++)
+		s[j] = a[j];
+	return (s);
+}
+/**
  * str_concat - concatenates two strings
  * @s1: string 1
  * @s2: string 2
@@ -14,9 +31,9 @@ char *str_concat(char *s1, char *s2)
 
 	i = j = x = 0;
 	if (s1 == NULL && s2 != NULL)
-		return (s2);
+		return (ret_string(s2));
 	if (s2 == NULL && s1 != NULL)
-		return (s1);
+		return (ret_string(s1));
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	while (s1[i])
@@ -31,11 +48,13 @@ char *str_concat(char *s1, char *s2)
 	{
 		if (s1[i] == '\0')
 		{
-			for (j = 0; s2[j] <= '\0'; j++)
+			for (j = 0; s2[j] != '\0'; j++)
 			{
 				c[i] = s2[j];
 				i++;
 			}
+			c[i] = '\0';
+			break;
 		}
 		c[i] = s1[i];
 	}
