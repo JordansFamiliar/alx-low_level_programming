@@ -12,9 +12,9 @@ char *argstostr(int ac, char **av)
 	int i, j, x = 0;
 	char *s, *n = NULL;
 
-	if (av == NULL || ac == 1)
+	if (av == NULL || ac == 0)
 		return (n);
-	for (i = 1; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		j = 0;
 		while (av[i][j])
