@@ -19,7 +19,7 @@ void mul(char **v)
 		count2++;
 	num1 = malloc(sizeof(int) * count1);
 	num2 = malloc(sizeof(int) * count2);
-	result = malloc(sizeof(int) * (count1 + count2));
+	result = calloc(count1 + count2, sizeof(int));
 	if (num1 == NULL || num2 == NULL || result == NULL)
 		exit(1);
 	for (i = 0; i < count1; i++)
