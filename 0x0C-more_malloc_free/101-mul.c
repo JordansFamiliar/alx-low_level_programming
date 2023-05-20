@@ -21,7 +21,7 @@ void mul(char **v)
 	num2 = malloc(sizeof(int) * count2);
 	result = malloc(sizeof(int) * (count1 + count2));
 	if (num1 == NULL || num2 == NULL || result == NULL)
-		exit(98);
+		exit(1);
 	for (i = 0; i < count1; i++)
 		num1[i] = v[1][i] - '0';
 	for (i = 0; i < count2; i++)
