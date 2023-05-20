@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * divisio - helper function for is_prime_number
+ * division - helper function for is_prime_number
  * @n: number
  * @i: denominator
  * Return: int
