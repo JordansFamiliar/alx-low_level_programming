@@ -2,12 +2,19 @@
 #define LISTS_H
 #include <stddef.h>
 typedef struct list *listPtr;
+/**
+ * list - struct for linked list
+ * @str: string
+ * @len: length of string
+ * @next: pointer to next node
+ */
 typedef struct list
 {
 	char *str;
 	int len;
 	listPtr next;
 } list_t;
+int _putchar(char c);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);

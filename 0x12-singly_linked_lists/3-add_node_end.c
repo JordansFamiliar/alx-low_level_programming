@@ -11,6 +11,7 @@
 list_t *add_node_end(list_t **head, const char *str)
 {
 	listPtr new_node;
+
 	if (head != NULL)
 	{
 		if (*head == NULL)
