@@ -14,6 +14,8 @@ typedef struct list
 	int len;
 	listPtr next;
 } list_t;
+void call_print_line(void);
+void print_line(void);
 int _putchar(char c);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
