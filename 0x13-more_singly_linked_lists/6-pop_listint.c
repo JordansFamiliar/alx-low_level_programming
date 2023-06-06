@@ -10,17 +10,17 @@
 int pop_listint(listint_t **head)
 {
 	listPtr node = *head;
-	int data = node->n;
+	int data;
 
-	if (head == NULL || node == NULL)
+	if (node == NULL)
 		return (0);
+	data = node->n;
 	if (node->next == NULL)
 	{
 		*head = NULL;
-		head = NULL;
 	}
 	else
-		*head = (*head)->next;
+		*head = node->next;
 	free(node);
 	return (data);
 }
