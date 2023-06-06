@@ -11,11 +11,12 @@ void free_listint2(listint_t **head)
 	listPtr current, next;
 
 	current = *head;
-	while (current != NULL && head != NULL)
+	while (current != NULL)
 	{
 		next = current->next;
 		free(current);
 		current = next;
 	}
 	*head = NULL;
+	head = NULL;
 }

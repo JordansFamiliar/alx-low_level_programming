@@ -12,6 +12,8 @@ int pop_listint(listint_t **head)
 	listPtr node = *head;
 	int data = node->n;
 
+	if (node == NULL || head == NULL)
+		return (0);
 	*head = (*head)->next;
 	free(node);
 	return (data);
