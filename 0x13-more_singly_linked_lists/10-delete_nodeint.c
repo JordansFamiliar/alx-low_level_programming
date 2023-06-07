@@ -26,7 +26,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		node = node->next;
 	if (node == NULL)
 	{
-		printf("NULL\n");
 		return (-1);
 	}
 	else
