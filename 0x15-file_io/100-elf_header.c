@@ -85,29 +85,29 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		printf("Usage: elf_header elf_filename\n");
+		dprintf(STDERR_FILENO, "Usage: elf_header elf_filename\n");
 		exit(98);
 	}
 	if (access(argv[1], F_OK) == -1)
 	{
-		printf("File does not exist\n");
+		dprintf(STDERR_FILENO, "File does not exist\n");
 		exit(98);
 	}
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
-		printf("Failed to open file\n");
+		dprintf(STDERR_FILENO, "Failed to open file\n");
 		exit(98);
 	}
 	bytes_read = read(fd, &header, sizeof(header));
 	if (bytes_read == -1)
 	{
-		printf("Failed to read fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Failed to read fd %d\n", fd);
 		exit(98);
 	}
-	if (bytes_read < sizeof(Elf64_Ehdr))
+	if ((size_t)bytes_read < sizeof(Elf64_Ehdr))
 	{
-		printf("Not an ELF file\n");
+		dprintf(STDERR_FILENO, "Not an ELF file\n");
 		exit(98);
 	}
 	print_elf(&header);
