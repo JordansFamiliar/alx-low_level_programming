@@ -11,18 +11,23 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	ssize_t bytes_written;
 	int desc;
-	size_t text_len = strlen(text_content);
+	size_t text_len;
 
 	if (filename == NULL)
 		return (-1);
+	if (text_content != NULL)
+		text_len = strlen(text_content);
 	desc = open(filename, (O_WRONLY | O_APPEND));
 	if (desc == -1)
 		return (-1);
-	bytes_written = write(desc, text_content, text_len);
-	if (bytes_written == -1)
+	if (text_len > 0)
 	{
-		close(desc);
-		return (-1);
+		bytes_written = write(desc, text_content, text_len);
+		if (bytes_written == -1)
+		{
+			close(desc);
+			return (-1);
+		}
 	}
 	close(desc);
 	return (1);

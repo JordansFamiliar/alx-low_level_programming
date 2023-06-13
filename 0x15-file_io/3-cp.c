@@ -18,7 +18,7 @@ void _cp(const char *src, const char *dest)
 	if (access(dest, F_OK) == -1)
 		file_perms = 0664;
 	src_desc = open(src, O_RDONLY);
-	if (src_desc == -1)
+	if (access(src, F_OK) == -1 || src_desc == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);

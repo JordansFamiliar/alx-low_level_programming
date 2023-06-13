@@ -6,7 +6,7 @@
 /**
  * create_file - a function that creates a file
  * @filename: name of file
- * @text_content; text to be written
+ * @text_content: text to be written
  * Return: 1 on success, -1 on failure
  */
 int create_file(const char *filename, char *text_content)
@@ -21,6 +21,8 @@ int create_file(const char *filename, char *text_content)
 	if (filename == NULL)
 		return (-1);
 	desc = open(filename, (O_WRONLY | O_CREAT | O_TRUNC), filePerms);
+	if (desc == -1)
+		return (-1);
 	bytes_Written = write(desc, text_content, text_len);
 	if (bytes_Written == -1)
 		return (-1);
